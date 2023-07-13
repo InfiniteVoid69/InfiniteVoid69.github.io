@@ -20,10 +20,10 @@
         </a>
         <div class="navbar-links">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="extra.html">Extra</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index">Home</a></li>
+                <li><a href="extra">Extra</a></li>
+                <li><a href="portfolio">Portfolio</a></li>
+                <li><a href="index#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
