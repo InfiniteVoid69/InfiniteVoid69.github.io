@@ -1,0 +1,501 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --Primary-Color: #219353;
+    --Background-Color: #181a1b;
+}
+body{
+    background-color: var(--Background-Color);
+    color: #fff;
+    min-height: 100vh;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* --- Not working yet ---
+.hidden{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+}
+*/
+
+
+/* --- Header --- */
+header{
+    background: #0000001d;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all 500ms ease-in-out;
+}
+header.scrolled {
+    background: #0f0f0f;
+}
+
+/* --- Navbar --- */
+.title{
+    color: var(--Primary-Color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+.navbar ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    position: relative;
+    padding: 5px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    position: relative;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.login{
+    color: #10a3cc;
+}
+nav ul li a::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: var(--Primary-Color);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.login::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #10a3cc;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    content: "";
+    width: 100%;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+}
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar{
+        background-color: #0f0f0f;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+/* --- Main stuff --- */
+
+.container{
+    padding: 10px 10%;
+    min-height: 100vh;
+}
+.text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.text h1{
+    margin-top: 20px;
+    font-size: 60px;
+}
+.text h1 span{
+    color: var(--Primary-Color);
+}
+
+/* --- Contact Me --- */
+#contact{
+    display: flex;
+    justify-content: center;
+    background: #181a1b;
+    width: 100%;
+}
+#contact .text{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+#contact h2{
+    color: var(--Primary-Color);
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#contact .row100{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+#contact .row100 .col{
+    position: relative;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+#contact .row100 .inputbox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: var(--Primary-Color);
+}
+#contact .row100 .inputbox input,
+#contact .row100 .inputbox.textarea textarea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #fff;
+}
+#contact .row100 .inputbox .text{
+    position: relative;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+#contact .row100 .inputbox input:focus + .text,
+#contact .row100 .inputbox input:valid + .text{
+    top: -35px;
+    left: -10px;
+}
+#contact .row100 .inputbox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--Primary-Color);
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+#contact .row100 .inputbox input:focus ~ .line,
+#contact .row100 .inputbox input:valid ~ .line{
+    height: 100%;
+}
+#contact .row100 .inputbox.textarea{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+}
+#contact .row100 .inputbox.textarea textarea{
+    height: 100%;
+    resize: none;
+}
+#contact .row100 .inputbox textarea:focus + .text,
+#contact .row100 .inputbox textarea:valid + .text{
+    top: -35px;
+    left: -10px;
+}
+#contact .row100 .inputbox textarea:focus ~ .line,
+#contact .row100 .inputbox textarea:valid ~ .line{
+    height: 100%;
+}
+input[type="submit"]{
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background-color: var(--Primary-Color);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+.contacts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+    gap: 10%;
+}
+.discord{
+    cursor: pointer;
+    color: #fff;
+    background-color: #7289da;
+    border-color: #7289da;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+.twitter{
+    cursor: pointer;
+    color: #fff;
+    background-color: #1DA1F2;
+    border-color: #1DA1F2;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+.discord:hover{
+    transform: scale(1.05);
+    background-color: #5366a9;
+    border-color: #5366a9;
+}
+.twitter:hover{
+    transform: scale(1.05);
+    background-color: #1184ca;
+    border-color: #1184ca;
+}
+.roblox{
+    cursor: pointer;
+    color: #fff;
+    background-color: #888585;
+    border-color: #888585;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+.roblox:hover{
+    transform: scale(1.05);
+    background-color: #5f6061;
+    border-color: #5f6061;
+}
+
+
+
+
+
+
+
+
+/*--------About Me-------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+span{
+    color: var(--Primary-Color);
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--Primary-Color);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active::after{
+    width: 100%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+color: var(--Primary-Color);
+font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active{
+    display: block;
+}
+
+
+/* --- Portfolio stuff */
+.pcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10%;
+    min-height: 50vh;
+}
+
+/* --- Portfolio --- */
+.image-container{
+    display: inline-block;
+    position: relative;
+    margin: 50px;
+}
+.image-container img{
+    width: 350px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 5%;
+    transition: transform .2s ease;
+}
+.image-container:hover img{
+    transform: scale(1.05);
+}
+.gallery-container h1 {
+    margin-bottom: 10px;
+}
+.image-title{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+.image-container:hover .image-title{
+    opacity: 1;
+}
+.gallery-container{
+    overflow: auto;
+    display: none;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    border: 2px solid black;
+    border-radius: 25px;
+    justify-content: center;
+}
+.gallery-container.active{
+    display: grid;
+    row-gap: 5px;
+    
+}
+.gallery-container img{
+    margin: 5px;
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+
+
+
+/* --- Footer --- */
+footer p{
+    padding: 0;
+    font-size: 0.8em;
+    color: #ffffff59;
+    margin: 0;
+    font-size: 1rem;
+}
+footer{
+    width: 100%;
+    background: #0f0f0f;
+    color: #fff; 
+    display: grid;
+    place-items: center;
+    padding: 2em; 
+    font-size: 1.2rem;
+}
+
+/* --- Sticky Footer --- */
+.sticky-footer{
+    position: sticky;
+    top: 100%;
+}
