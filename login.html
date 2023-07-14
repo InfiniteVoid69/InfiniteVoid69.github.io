@@ -33,18 +33,45 @@
 <form>
     <h1>Login</h1>
     <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
+    <input type="text" id="username" name="username" required><br>
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+    <input type="password" id="password" name="password" required><br>
     <button type="submit">Login</button>
 </form>
 
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    form{
+        height: 500px;
+        width: 400px;
+        border: 3px solid #4b4b4ba7;
+        background: #2b2b2b;
+        border-radius: 10px;
+        color: var(--Primary-Color);
+    }
+    form h1{
+        text-align: center;
+        margin: 30px;
+    }
+    form input{
+        display: block;
+        border: 2px solid;
+        border-radius: 7px;
+        width: 90%;
+        padding: 10px;
+        margin: 10px auto;
+        background-color: #ffffffee;
+    }
+    form label{
+        padding: 20px;
+    }
 
-<footer class="sticky-footer">
-    <p> &copy; Copyright 2023.<br>
-        All Rights Reserved.
-    </p>
-</footer>
+</style>
 
 <script>
     //scroll thing
