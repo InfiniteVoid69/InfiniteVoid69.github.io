@@ -14,7 +14,7 @@
 <!------Header------>
 <header>
     <nav class="navbar">
-        <a class="title" href="index.html">Portfolio</a>
+        <a class="title" href="index">.infinitevoid.</a>
         <a href="#" class="toggle-button">  
             <span class="bar"></span>
             <span class="bar"></span>
@@ -24,8 +24,8 @@
         <div class="navbar-links">
             <ul>
                 <li><a href="index">Home</a></li>
-                <li><a href="extra">Extra</a></li>
-                <li><a href="portfolio">Portfolio</a></li>
+                <li><a href="scripting">Scripting</a></li>
+                <li><a href="modeling">3D Modeling</a></li>
                 <li><a href="index#contact">Contact</a></li>
             </ul>
         </div>
@@ -50,15 +50,22 @@
         <div class="row100">
             <div class="col">
                 <div class="inputbox">
-                    <input type="text" name="Name" required="required">
-                    <span class="text">Name</span>
+                    <input type="text" name="fname" required="required">
+                    <div class="text">First Name <span>*</span></div>
                     <span class="line"></span>
                 </div>
             </div>
             <div class="col">
                 <div class="inputbox">
-                    <input type="text" name="Contact" required="required">
-                    <span class="text">Contact Information</span>
+                    <input type="text" name="lname" required="required">
+                    <div class="text">Last Name <span>*</span></div>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputbox">
+                    <input type="email" name="email" required="required">
+                    <div class="text">Email <span>*</span></div>
                     <span class="line"></span>
                 </div>
             </div>
@@ -67,7 +74,7 @@
             <div class="col">
                 <div class="inputbox textarea">
                     <textarea name="Message"  required="required"></textarea>
-                    <span class="text">Message...</span>
+                    <div class="text">Message... <span>*</span></div>
                     <span class="line"></span>
                 </div>
             </div>
@@ -102,24 +109,7 @@
     </p>
 </footer>
 
-<script>
-    //scroll thing
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            console.log(entry)
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show')
-            } else {
-                entry.target/classList.remove('show');
-            }
-        });
-    });
-
-    const hiddenElements = document.querySelectorAll('.hidden');
-    hiddenElements.forEach((el) => observer.observe(el))
-
-
-    
+<script>    
     //Bar thing
     const toggleButton = document.getElementsByClassName('toggle-button')[0]
     const navbarLinks = document.getElementsByClassName('navbar-links')[0]

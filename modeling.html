@@ -14,7 +14,7 @@
 <!------Header------>
 <header>
   <nav class="navbar">
-    <a class="title" href="index.html">Portfolio</a>
+    <a class="title" href="index">.infinitevoid.</a>
     <a href="#" class="toggle-button">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -23,47 +23,13 @@
       <div class="navbar-links">
           <ul>
               <li><a href="index">Home</a></li>
-              <li><a href="extra">Extra</a></li>
-              <li><a href="portfolio">Portfolio</a></li>
+              <li><a href="scripting">Scripting</a></li>
+              <li><a href="modeling">3D Modeling</a></li>
               <li><a href="index#contact">Contact</a></li>
           </ul>
       </div>
   </nav>
 </header>
-
-
-<!------Image Gallery----->
-<h1>Portfolio</h1>
-
-  <div class="image-container" onclick="showGallery('scripting')">
-    <img src="images/images.png" alt="Scripting">
-    <p class="image-title">Scripting</p>
-  </div>
-
-  <div class="image-container" onclick="showGallery('building')">
-    <img src="images/images.png" alt="Building">
-    <p class="image-title">Building</p>
-  </div>
-
-  <div class="image-container" onclick="showGallery('modeling')">
-    <img src="images/images.png" alt="Modeling">
-    <p class="image-title">Modeling</p>
-  </div>
-
-  <div id="scripting-gallery" class="gallery-container">
-    <h1>Scripting</h1>
-    
-  </div>
-
-  <div id="building-gallery" class="gallery-container">
-    <h1>Building</h1>
-
-  </div>
-  
-  <div id="modeling-gallery" class="gallery-container">
-    <h1>Modeling</h1>
-
-  </div>
 
 
 
@@ -94,24 +60,7 @@
         header.classList.remove('scrolled');
         }
     });
-
-    function showGallery(category) {
-        var galleries = document.querySelectorAll('.gallery-container');
-        for (var i = 0; i < galleries.length; i++) {
-          galleries[i].classList.remove('active');
-        }
-        document.getElementById(category + '-gallery').classList.add('active');
-      }
 </script>
-    
-<style>
-body {
-text-align: center;
-}
-h1 {
-margin-top: 5%;
-}
-</style>
 
 
 

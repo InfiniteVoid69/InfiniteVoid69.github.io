@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./src/style.css">    
+</head>
+<body>
+
+
+<!------Header------>
+<header>
+    <nav class="navbar">
+        <a class="title" href="index">.infinitevoid.</a>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="index">Home</a></li>
+                <li><a href="scripting">Scripting</a></li>
+                <li><a href="modeling">3D Modeling</a></li>
+                <li><a href="index#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="sticky-footer">
+    <!-- <h2>Footer Stick to the Bottom</h2> -->
+    <p> &copy; Copyright 2023.<br>
+        All Rights Reserved.
+    </p>
+</footer>
+
+<script>
+
+    //Bar thing
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+    toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active')
+    })
+        
+    // Scroll
+    const header = document.querySelector('header');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > header.offsetHeight) {
+        header.classList.add('scrolled');
+        } else {
+        header.classList.remove('scrolled');
+        }
+    });
+    
+    </script>
+    
+</body>
+</html>
