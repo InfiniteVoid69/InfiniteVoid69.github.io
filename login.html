@@ -30,7 +30,7 @@
     </nav>
 </header>
 
-<form>
+<form action="login.php" method="post">
     <h1>Login</h1>
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required><br>
@@ -47,7 +47,7 @@
         height: 100vh;
     }
     form{
-        height: 500px;
+        height: 400px;
         width: 400px;
         border: 3px solid #4b4b4ba7;
         background: #2b2b2b;
@@ -60,17 +60,36 @@
     }
     form input{
         display: block;
-        border: 2px solid;
+        border: none;
         border-radius: 7px;
         width: 90%;
         padding: 10px;
         margin: 10px auto;
-        background-color: #ffffffee;
     }
     form label{
         padding: 20px;
     }
+    button{
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        margin-right: 20px;
+        float: right;
+    }
+    button:hover{
+        transform: scale( 1.05 );
+        background-color: #3e8e41;
+    }
 
+    @media (max-width: 800px) {
+        form{
+            margin-top: 40%;
+        }
+    }
 </style>
 
 <script>
