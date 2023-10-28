@@ -63,15 +63,18 @@ nav ul li a{
     font-size: 18px;
 }
 nav ul li a:hover{
-    color: #ffffff8a;
+    color: #ffffff9d;
 }
 .navbar-icons{
     display: flex;
     align-items: center;
     gap: 14px;
 }
-.navbar-icons a:hover{
-    color: #ffffff8a;
+.navbar-icons a svg{
+    fill: #fff;
+}
+.navbar-icons a svg:hover{
+    fill: #ffffff9d;
 }
 
 /* --- Main stuff --- */
