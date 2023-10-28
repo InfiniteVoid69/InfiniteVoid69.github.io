@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 :root{
-    --Primary-Color: #219353;
+    --Primary-Color: #41579F;
     --Background-Color: #181a1b;
     --Text-Color2: #f2f2f2;
 }
@@ -53,6 +53,51 @@ header.scrolled {
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
+}
+.name-frame{
+    display: flex;
+    width: 160px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+.meCircle{
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    flex-shrink: 0;
+}
+.meName{
+    color: var(--primary-color);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+}
+.navbar-links{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+.navbar-icons{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.icon-github{
+    width: 25px;
+    height: 24.383px;
+}
+.icon-discord{
+    width: 25px;
+    height: 19.056px;
+}
+.icon-twitter{
+    width: 25px;
+    height: 20.314px;
 }
 
 
