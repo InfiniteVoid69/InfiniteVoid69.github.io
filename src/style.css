@@ -19,40 +19,21 @@ html{
 }
 
 
-/* --- Not working yet ---
-.hidden{
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: all 1s;
-}
-.show{
-    opacity: 1;
-}
-*/
-
-
-/* --- Header --- */
+/* --- Navbar --- */
 header{
-    background: #0f0f0f;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 9999;
-    transition: all 200ms ease-in-out;
+    z-index: 99999;
 }
-header.scrolled {
-    background: #00000000;
-}
-
-/* --- Navbar --- */
 .navbar{
+    position: relative;
+    padding: 5 10%;
     display: flex;
-    width: 1054px;
-    height: 60px;
     justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
+    flex-wrap: wrap;
 }
 .name-frame{
     display: flex;
