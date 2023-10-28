@@ -65,17 +65,8 @@ header.scrolled {
     width: 25px;
     height: 25px;
     border-radius: 25px;
-    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    background: lightgray 50% / cover no-repeat;
     flex-shrink: 0;
-}
-.meName{
-    color: var(--primary-color);
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-align: center;
 }
 nav ul{
     display: flex;
