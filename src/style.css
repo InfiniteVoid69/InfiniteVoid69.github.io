@@ -61,7 +61,7 @@ header.scrolled {
     gap: 10px;
     flex-shrink: 0;
 }
-.meCircle{
+.logo-img{
     width: 25px;
     height: 25px;
     border-radius: 25px;
