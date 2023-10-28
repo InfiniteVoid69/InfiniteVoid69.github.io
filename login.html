@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Modeling</title>
+    <title>Login</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content=".infinitevoid.">
-    <meta name="description" content="Here you can see all my modeling experience and work,
-    this shows youmy past creativity and future potential.">
+    <meta name="description" content="There is nothing to see here">
     <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="./src/style.css">
 </head>
@@ -46,32 +45,98 @@
     </nav>
 </header>
 
-<div class="container">
-  <div class="text">
-      <h2>This Website in under heavy development,<br> come back later and this may be finalized!</h2>
-  </div>
-</div>
+<form action="login.php" method="post">
+    <h1>Login</h1>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+    <button type="submit">Login</button>
+</form>
 
-<footer class="sticky-footer">
-    <p> &copy; Copyright 2023.<br>
-        All Rights Reserved.
-    </p>
-</footer>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    form{
+        height: 400px;
+        width: 400px;
+        border: 3px solid #4b4b4ba7;
+        background: #2b2b2b;
+        border-radius: 10px;
+        color: var(--Primary-Color);
+    }
+    form h1{
+        text-align: center;
+        margin: 30px;
+    }
+    form input{
+        display: block;
+        border: none;
+        border-radius: 7px;
+        width: 90%;
+        padding: 10px;
+        margin: 10px auto;
+    }
+    form label{
+        padding: 20px;
+    }
+    button{
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        margin-right: 20px;
+        float: right;
+    }
+    button:hover{
+        transform: scale( 1.05 );
+        background-color: #3e8e41;
+    }
 
-
+    @media (max-width: 800px) {
+        form{
+            margin-top: 40%;
+        }
+    }
+</style>
 
 <script>
+    //scroll thing
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show')
+            } else {
+                entry.target/classList.remove('show');
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el))
+
+
+    
     //Bar thing
     const toggleButton = document.getElementsByClassName('toggle-button')[0]
     const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
     toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active')
-    })
-        
+    });
+
+
     // Scroll
     const header = document.querySelector('header');
-    
+
     window.addEventListener('scroll', function() {
         if (window.scrollY > header.offsetHeight) {
         header.classList.add('scrolled');
@@ -80,11 +145,5 @@
         }
     });
 </script>
-
-
-
-
-
-
 </body>
 </html>
