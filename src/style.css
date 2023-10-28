@@ -70,6 +70,9 @@ nav ul li a:hover{
     align-items: center;
     gap: 14px;
 }
+.navbar-icons a:hover{
+    color: #ffffff8a;
+}
 
 /* --- Main stuff --- */
 
