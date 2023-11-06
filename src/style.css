@@ -7,6 +7,7 @@
 :root{
     --Primary-Color: #41579F;
     --Background-Color: #181a1b;
+    --Background-Color2:#0F0F0F;
     --Text-Color2: #f2f2f2;
 }
 body{
@@ -77,8 +78,7 @@ nav ul li a:hover{
     fill: #ffffff9d;
 }
 
-/* --- Main stuff --- */
-
+/* --- Main --- */
 .container{
     padding: 10px 10%;
     min-height: 100vh;
@@ -95,6 +95,32 @@ nav ul li a:hover{
     color: var(--Primary-Color);
 }
 
+#skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    padding: 100px;
+    height: fit-content;
+    gap: 100px;
+    background-color: var(--Background-Color2);
+    flex-wrap: wrap
+}
+#skills .skill{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px
+}
+#skills ul li{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
+
 /* --- Footer --- */
 footer p{
     padding: 0;
@@ -105,15 +131,13 @@ footer p{
 }
 footer{
     width: 100%;
-    background: #0f0f0f;
+    background: var(--Background-Color2);
     color: #fff; 
     display: grid;
     place-items: center;
     padding: 2em; 
     font-size: 1.2rem;
 }
-
-/* --- Sticky Footer --- */
 .sticky-footer{
     position: sticky;
     top: 100%;
