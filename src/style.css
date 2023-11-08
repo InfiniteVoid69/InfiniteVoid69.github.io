@@ -7,6 +7,7 @@
 :root{
     --Primary-Color: #41579F;
     --Background-Color: #181a1b;
+    --Background-Color-Off: #1a1c1d;
     --Background-Color2:#0F0F0F;
     --Text-Color2: #f2f2f2;
 }
@@ -28,6 +29,8 @@ header{
     top: 0;
     left: 0;
     z-index: 99999;
+    background: var(--Background-Color);
+    box-shadow: 0 1px 20px var(--Background-Color-Off);
 }
 .navbar{
     position: relative;
@@ -111,6 +114,11 @@ nav ul li a:hover{
     align-items:center;
     justify-content:center;
     gap:15px
+}
+#skills ul li{
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 
