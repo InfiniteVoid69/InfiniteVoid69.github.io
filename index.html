@@ -4,20 +4,20 @@
     <title>Home | .infinitevoid.</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Portfolio, infinitevoid, .infinitevoid., InfiniteVoid, BigBoss9324">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#41579F" />
     <meta name="author" content=".infinitevoid.">
-    <meta name="description" content="This is my portfolio website,
-    you can view all my work and information about me here.">
+    <meta
+        name="description"
+        content="This is my portfolio website, you can view all my work and information about me here.">
     <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="./src/style.css">
-    <i class="bi bi-discord"></i>
 </head>
 <body>
 <header>
     <nav class="navbar">
         <ul class="logo">
-            <img class="logo-img" src="./images/meCircle.svg">
+            <img class="logo-img" src="./public/meCircle.svg">
             <div class="logo-text"><b>.InfiniteVoid.</b></div>
         </ul>
         <div class="navbar-links">
@@ -91,30 +91,5 @@
         All Rights Reserved.
     </p>
 </footer>
-
-<script>    
-    //Bar thing
-    const toggleButton = document.getElementsByClassName('toggle-button')[0]
-    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-
-    toggleButton.addEventListener('click', () => {
-    navbarLinks.classList.toggle('active')
-    });
-
-
-    // Scroll
-    const header = document.querySelector('header');
-
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > header.offsetHeight) {
-        header.classList.add('scrolled');
-        } else {
-        header.classList.remove('scrolled');
-        }
-    });
-</script>
-
-
-
 </body>
 </html>
