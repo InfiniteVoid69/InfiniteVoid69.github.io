@@ -9,7 +9,10 @@
     --Background-Color: #181a1b;
     --Background-Color-Off: #1a1c1d;
     --Background-Color2:#0F0F0F;
-    --Text-Color2: #f2f2f2;
+    --Text-Color: #f2f2f2;
+    --Text-Color-Off: #ffffff9d;
+    --Text-Color2: #ffffff59;
+    --Speed: 500ms;
 }
 body{
     background-color: var(--Background-Color);
@@ -19,7 +22,13 @@ body{
 html{
     scroll-behavior: smooth;
 }
-
+ul{
+    list-style: none;
+}
+a{
+    color: var(--Text-Color);
+    text-decoration: none;
+}
 
 /* --- Navbar --- */
 header{
@@ -33,7 +42,6 @@ header{
     box-shadow: 0 1px 20px var(--Background-Color-Off);
 }
 .navbar{
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,16 +66,13 @@ header{
 }
 nav ul{
     display: flex;
-    list-style-type: none;
     gap: 30px;
 }
 nav ul li a{
-    color: #fff;
-    text-decoration: none;
     font-size: 18px;
 }
 nav ul li a:hover{
-    color: #ffffff9d;
+    color: var(--Text-Color-Off);
 }
 .navbar-icons{
     display: flex;
@@ -75,10 +80,10 @@ nav ul li a:hover{
     gap: 14px;
 }
 .navbar-icons a svg{
-    fill: #fff;
+    fill: var(--Text-Color);
 }
 .navbar-icons a svg:hover{
-    fill: #ffffff9d;
+    fill: var(--Text-Color-Off);
 }
 
 /* --- Main --- */
@@ -115,11 +120,6 @@ nav ul li a:hover{
     justify-content:center;
     gap:15px
 }
-#skills ul li{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
 
 
 
@@ -128,14 +128,14 @@ nav ul li a:hover{
 footer p{
     padding: 0;
     font-size: 0.8em;
-    color: #ffffff59;
+    color: var(--Text-Color2);
     margin: 0;
     font-size: 1rem;
 }
 footer{
     width: 100%;
     background: var(--Background-Color2);
-    color: #fff; 
+    color: var(--Text-Color); 
     display: grid;
     place-items: center;
     padding: 2em; 
