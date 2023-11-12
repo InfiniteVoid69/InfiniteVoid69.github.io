@@ -12,10 +12,14 @@
         content="This is my portfolio website, you can view all my work and information about me here.">
     <link rel="shortcut icon" href="./public/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="./src/index.css">
-    <script src="./src/index.js"></script>
-</head>
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("nav.html");
+        });
+    </script>
 <body>
 
+<div id="#nav-placeholder"></div>
 
 
 <div class="container">
