@@ -3,6 +3,8 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
 }
 :root{
     --Primary-Color: #41579F;
@@ -27,7 +29,6 @@ ul{
 }
 a{
     color: var(--Text-Color);
-    text-decoration: none;
 }
 
 /* --- Navbar --- */
