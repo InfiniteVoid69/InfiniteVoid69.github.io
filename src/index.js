@@ -2,8 +2,8 @@ $(function(){
     $("#nav-placeholder").load("./assets/nav.html");
 });
 
-$('#targetid').load('somewhere/a.html');
+$('#targetid').load('./assets/nav.html');
 
-function load_home() {
+window.onload = function () {
     document.getElementById("nav-placeholder").innerHTML='<object type="text/html" data="./asstes/nav.html" ></object>';
 }
