@@ -1,9 +1,3 @@
-$(function(){
-    $("#nav-placeholder").load("./assets/nav.html");
-});
-
-$("#nav-placeholder").click(function() {
-    alert("worked")
-});
-
-// $('#nav-placeholder').load('./assets/nav.html');
+// $(function(){
+//     $("#test").load("./assets/nav.html #test", alert("Load was succesfull"));
+// });
