@@ -115,7 +115,8 @@ nav ul li a:hover{
     background-color: var(--Background-Color2);
     flex-wrap: wrap
 }
-#skill .title{
+#skill h1{
+    margin: 50%;
     color: var(--Text-Color);
     font-size: 30px;
 }
