@@ -114,14 +114,16 @@ nav ul li a:hover{
     background-color: var(--Background-Color2);
     flex-wrap: wrap
 }
+#skill .title{
+    color: var(--Text-Color);
+    font-size: 30px;
+}
 #skills .skill{
     display: flex;
     align-items:center;
     justify-content:center;
     gap:15px
 }
-
-
 
 
 /* --- Footer --- */
