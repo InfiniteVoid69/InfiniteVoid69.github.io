@@ -80,11 +80,14 @@ nav ul li a:hover{
     align-items: center;
     gap: 14px;
 }
-.navbar-icons a svg{
+.navbar-icons svg{
     fill: var(--Text-Color);
 }
 .navbar-icons a svg:hover{
     fill: var(--Text-Color-Off);
+}
+.hamburger{
+    display: none;
 }
 
 /* --- Main --- */
@@ -127,6 +130,11 @@ nav ul li a:hover{
     gap:15px
 }
 
+@media (max-width: 900px) {
+    .hamburger{
+        display: block;
+    }
+}
 
 /* --- Footer --- */
 footer p{
